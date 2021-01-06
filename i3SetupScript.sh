@@ -23,11 +23,19 @@ sudo apt -y install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfix>
 # install build tools
 sudo apt -y install meson ninja-build cmake python3-pip
 
+print_header($header) {
+  printf "\n\n${GREEN}==============================================${NC}\n"
+  printf "${RED} $1 ${NC}"
+  printf "\n\n${GREEN}==============================================${NC}\n"
+
+}
+
 # fetch picom from github
 clone_picom () {
+  print_header "Cloning Picom"
   if cd /tmp/picom
   then
-   printf "\n\n${RED} Picom git reposetory already cloned. Continuing...${>
+   printf "\n\n${RED} Picom git reposetory already cloned. Continuing...${NC}\n\n"
   else
     git clone https://github.com/yshui/picom.git /tmp/picom
   fi
@@ -36,6 +44,7 @@ clone_picom
 
 # install picom
 install_picom (){
+  print_header "Installing Picom"
   sudo meson --buildtype=release . build
   sudo ninja -C build
   sudo ninja -C build install
@@ -44,13 +53,14 @@ install_picom (){
 
 install_picom
 # copy sample config to .config folder
-printf "\n\n${GREEN} Copying Picom config file to ~/.config/picom.conf ${N>
+print_header "Copying Picom config file to ~/.config/picom.conf"
 cp /tmp/picom/picom.sample.conf ~/.config/picom.conf
 
 clone_pywal() {
+  print_header "Cloning Pywal"
   if cd /tmp/pywal
   then
-    printf "\n\n${RED} Pywall git reposetory already cloned. Continueing..>
+    printf "\n\n${RED} Pywall git reposetory already cloned. Continueing..${NC}"
   else 
     git clone https://github.com/dylanaraps/pywal /tmp/pywal
   fi
@@ -59,13 +69,15 @@ clone_pywal() {
 clone_pywal
 
 install_pywall() {
- pip3 install /tmp/pywal/ 
+  print_header "Installing pywall"
+  pip3 install /tmp/pywal/ 
 
 }
 
 install_pywall
 
 install_ranger() {
+  print_header "Installing Ranger"
         sudo apt -y install ranger caca-utils highlight atool w3m poppler->
         ranger --copy-config=all
 }
