@@ -84,4 +84,13 @@ install_ranger() {
 
 install_ranger
 
+## installing rofi
 sudo apt -y install rofi
+
+install_alacritty(){
+  #installing build tools
+  sudo apt-get -y install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
+  sudo apt -y install cargo
+  cargo install alacritty
+}
+
