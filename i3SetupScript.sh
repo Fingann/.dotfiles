@@ -91,6 +91,10 @@ install_alacritty(){
   #installing build tools
   sudo apt-get -y install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev python3
   sudo apt -y install cargo
+  
   cargo install alacritty
+  #appending location to path
+  echo "export PATH=$HOME/.cargo/bin:$PATH" >> $HOME/.bashrc
 }
+
 
