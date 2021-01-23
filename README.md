@@ -1,1 +1,1 @@
-# dotfiles-Ubuntu-i3
+# .dotfiles
