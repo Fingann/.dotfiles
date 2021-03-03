@@ -1,5 +1,8 @@
 !/bin/bash
 
+#Do not use this shit.
+
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m' # No Color
@@ -18,7 +21,7 @@ sudo apt -y install feh
 #### install piecom #####
 
 # install dependencies
-sudo apt -y install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfix>
+sudo apt -y install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfix
 
 # install build tools
 sudo apt -y install meson ninja-build cmake python3-pip

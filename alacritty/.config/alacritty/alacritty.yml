@@ -27,17 +27,17 @@ scrolling:
 
 # Font configurations
 font:
-# normal:
-#   family: Noto Sans
-#   style: Regular
-#
-# bold:
-#   family: Noto Sans
-#   style: Bold
-#
-# italic:
-#   family: Noto Sans
-#   style: Italic
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono Bold
+    style: Bold
+
+  italic:
+    family: JetBrains Mono Italic
+    style: Italic
 
   size: 10.0
 

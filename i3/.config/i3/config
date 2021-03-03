@@ -1,7 +1,8 @@
+set $FONT JetBrains Mono 14
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 #font pango:monospace 8
-font pango:Noto Sans 14
+font pango:$FONT
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -15,6 +16,7 @@ exec --no-startup-id /usr/bin/unclutter -b
 exec --no-startup-id feh --bg-scale $HOME/.wallpaper
 exec --no-startup-id picom --experimental-backends --backend glx --config ~/.config/i3/picom.conf
 exec --no-startup-id redshift 
+exec dunst -- notification server
 
 ############################### Gaps #############################
 hide_edge_borders smart
@@ -29,7 +31,7 @@ focus_follows_mouse no
 ################################ Start Applications ##############################
 bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
-bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font 'Noto Sans 8'
+bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 3 -font '$FONT'
 
 ################################ Volume Control#############################
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -166,12 +168,12 @@ client.background           #2f343f
 bar {
         height 45
         workspace_buttons yes
-        font pango:Noto Sans 20
+        font pango:$FONT
 
 	#position top
         position bottom
 
-        status_command i3blocks -c ~/.config/i3/i3blocks.config
+        status_command i3blocks -c ~/.config/i3blocks/config
         colors {
             background #2F2F2F
             statusline #eeeeee
