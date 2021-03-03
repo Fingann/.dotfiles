@@ -1,4 +1,5 @@
 rofi.modi: drun,window
+rofi.font: JetBrains Mono 14
 rofi.lines: 4
 rofi.columns: 2
 rofi.width: 50

@@ -8,6 +8,12 @@
 #color=#FEC925
 #signal=2
 
+
+[INTERFACE]
+command=hostname -I | awk 'print{print $1}'
+interval=10
+color=#C9E3DB
+
 [DISK]
 command=df -h / | awk '/\//{ printf("  %4s/%s \n", $4, $2) }'
 interval=2
