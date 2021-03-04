@@ -3,3 +3,5 @@ Xft.dpi: 200
 Xcursor.theme: Neutral
 Xcursor.size: 70
 
+i3wm.Font:"JetBrains Mono 14"
+
