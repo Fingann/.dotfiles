@@ -10,7 +10,8 @@ MUTED=$(amixer get Master | awk ' /%/{print ($NF=="[off]" ? 1 : 0); exit;}')
 ICON=$VOLUME_MUTE
 if [ "$MUTED" = "1" ]
 then
-    ICON="$VOLUME_MUTE"
+    echo "VOL: Muted"
+   # ICON="$VOLUME_MUTE"
 else
     if [ "$SOUND_LEVEL" -lt 34 ]
     then

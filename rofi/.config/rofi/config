@@ -1,11 +1,13 @@
-rofi.modi: drun,window
+rofi.modi: drun,window,ssh
 rofi.font: JetBrains Mono 14
-rofi.lines: 4
-rofi.columns: 2
-rofi.width: 50
+rofi.lines: 12
+rofi.padding: 18
+rofi.columns: 3
+rofi.width: 60
 rofi.height: 50
 rofi.drun-icon-theme: Pop
 rofi.show-icons: true
 rofi.sidebar-mode: true
+rofi.location: 0
 rofi.m: -4
 rofi.theme: material

@@ -1,6 +1,9 @@
 export DOT=$HOME/.dotfiles
 export PATH=/opt/bin/Goland/bin:$PATH
 export PATH=$PATH:/usr/local/go/bin
+
+# Render font awesome glyths correctly
+export LC_ALL="en_US.UTF-8"
  
  
  
