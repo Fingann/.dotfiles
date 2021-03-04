@@ -10,7 +10,7 @@
 
 
 [INTERFACE]
-command=hostname -I | awk 'print{print $1}'
+command=hostname -I 
 interval=10
 color=#C9E3DB
 
