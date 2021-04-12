@@ -24,21 +24,6 @@ window:
 
 scrolling:
   multiplier: 1
-
-# Font configurations
-font:
-  normal:
-    family: JetBrains Mono
-    style: Regular
-
-  bold:
-    family: JetBrains Mono Bold
-    style: Bold
-
-  italic:
-    family: JetBrains Mono Italic
-    style: Italic
-
   size: 10.0
 
   offset:

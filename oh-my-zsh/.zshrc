@@ -76,6 +76,7 @@ plugins=(
         alias-finder
  	golang
 	ubuntu
+	vi-mode
  )
 
 # Auto RUN alias before every command
