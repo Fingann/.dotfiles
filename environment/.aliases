@@ -1,2 +1,2 @@
 alias pyserv="python3 -m http.server"
-
+alias dc="docker-compose"
