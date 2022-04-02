@@ -15,7 +15,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/unclutter -b
 exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper
-exec_always  --no-startup-id picom --experimental-backends --backend glx --config ~/.config/picom/picom 
+exec_always --no-startup-id picom --experimental-backends --backend glx --config ~/.config/picom/picom 
 exec --no-startup-id redshift 
 exec dunst -config ~/.config/dunst/dunstrc
 
@@ -152,6 +152,11 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 bindsym $mod+Shift+Escape exec /usr/bin/gnome-session-quit --logout
 bindsym $mod+Shift+Ctrl+Escape exec /usr/bin/gnome-session-quit --power-off
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+y move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+y scratchpad show
 
 ################################ Theme  #############################
 
