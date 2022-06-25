@@ -11,7 +11,8 @@ floating_modifier $mod
 set $mod Mod4
 
 ################################ Auto-Start ############################
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- xsecurelock  --nofork
+exec --no-startup-id xss-lock -n /usr/libexec/xsecurelock/dimmer -l -- xsecurelock --nofork
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/unclutter -b
 exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper
@@ -31,15 +32,15 @@ focus_follows_mouse no
 
 ################################ Start Applications ##############################
 bindsym $mod+Return exec $TERMINAL
+bindsym $mod+Shift+Ctrl+l exec xsecurelock
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 bindsym $mod+d exec rofi -show drun
 
 ################################ Volume Control #############################
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id volumectl up && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id volumectl down && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id volumectl toggle && $refresh_i3status
 
 ################################ Brightness Contols #############################
 
@@ -54,6 +55,7 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
 
 # move focused window
 bindsym $mod+Shift+h move left
