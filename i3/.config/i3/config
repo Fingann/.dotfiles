@@ -17,7 +17,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id /usr/bin/unclutter -b
 exec_always --no-startup-id feh --bg-scale $HOME/.wallpaper
 exec_always --no-startup-id picom --experimental-backends --backend glx --config ~/.config/picom/picom 
-exec --no-startup-id redshift 
+#exec --no-startup-id redshift 
 exec dunst -config ~/.config/dunst/dunstrc
 
 ############################### Gaps #############################

@@ -1,8 +1,7 @@
 export DOT=$HOME/.dotfiles
 export PATH=$PATH:/opt/bin/
 export PATH=$PATH:/home/sf/.local/bin
-export PATH=$PATH:/home/sf/Android/Sdk/platform-tools
-export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH=$PATH:$HOME/.pub-cache/bin
 
 # Golang
 export GOROOT=/usr/local/go
@@ -12,4 +11,11 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # Render font awesome glyths correctly
 export LC_ALL="en_US.UTF-8"
  
-	 
+# Android
+export PATH=$PATH:/home/sf/Android/Sdk/platform-tools
+export PATH=$PATH:/home/sf/Android/Sdk/tools/bin
+#export ANDROID_HOME="/opt/android-studio/jre"
+export ANDROID_NDK_ROOT=$HOME:/Android/android-ndk
+export ANDROID_SDK_ROOT=$HOME:/Android/Sdk
+export JAVA_HOME=/opt/android-studio/jre/
+
